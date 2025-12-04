@@ -3,10 +3,10 @@
 set -e
 
 echo "[INFO] Updating Debian..."
-apt update -y && apt upgrade -y
+sudo apt update -y && apt upgrade -y
 
 echo "[INFO] Installing Chromium + required libraries..."
-apt install -y \
+sudo apt install -y \
   chromium \
   chromium-driver \
   nodejs \
