@@ -19,6 +19,10 @@ set -e
 echo 'Updating Debian inside PRoot...'
 apt update -y && apt upgrade -y
 
+echo "" >> ~/.bashrc
+echo "# Custom colored prompt" >> ~/.bashrc
+echo "PS1='\\[\\e[1;31m\\]\\u\\[\\e[0m\\]@\\[\\e[1;32m\\]\\h\\[\\e[0m\\]:\\[\\e[1;36m\\]\\w\\[\\e[0m\\]\\$ '" >> ~/.bashrc
+
 echo 'Installing sudo and utils...'
 apt install -y sudo passwd
 echo 'Done configuring Debian.'
